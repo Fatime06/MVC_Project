@@ -132,3 +132,4 @@ C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\Juan_Mvc_Project.pdb
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\Juan_Mvc_Project.genruntimeconfig.cache
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\ref\Juan_Mvc_Project.dll
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\Juan_Mvc_Project.staticwebassets.runtime.json
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\Juan_Mvc_Project.sourcelink.json

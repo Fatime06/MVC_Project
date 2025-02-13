@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\models\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:models\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\data\\juandbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:data\\juandbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,20 +31,28 @@
       "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\data\\juandbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:data\\juandbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\migrations\\20250213104913_sliderstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:migrations\\20250213104913_sliderstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|c:\\users\\shahla\\desktop\\juan_mvc_project\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C57DB46-1A6C-426A-AF7B-0DB2BF3B2B79}|Juan_Mvc_Project.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,85 +62,43 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-12T23:44:19.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JuanDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Data\\JuanDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\JuanDbContext.cs",
-              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Data\\JuanDbContext.cs",
-              "RelativeToolTip": "Data\\JuanDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\Services.cs",
+              "RelativeDocumentMoniker": "Models\\Services.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\Services.cs",
+              "RelativeToolTip": "Models\\Services.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T23:43:29.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T11:05:08.609Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAoBAAAAAAAAAAASwBIBAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T23:42:24.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T10:19:06.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T23:42:04.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T23:41:42.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T23:40:42.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:42:04.676Z"
             },
             {
               "$type": "Document",
@@ -132,12 +110,109 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T23:40:17.497Z",
+              "WhenOpened": "2025-02-12T23:40:17.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T23:40:42.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T23:41:42.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T23:44:19.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Slider.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\Slider.cs",
+              "RelativeDocumentMoniker": "Models\\Slider.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\Slider.cs",
+              "RelativeToolTip": "Models\\Slider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:31:34.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeVm.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\ViewModels\\HomeVm.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HomeVm.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\ViewModels\\HomeVm.cs",
+              "RelativeToolTip": "ViewModels\\HomeVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:17:47.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JuanDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Data\\JuanDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\JuanDbContext.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Data\\JuanDbContext.cs",
+              "RelativeToolTip": "Data\\JuanDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T23:43:29.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20250213104913_SlidersTable.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Migrations\\20250213104913_SlidersTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250213104913_SlidersTable.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Migrations\\20250213104913_SlidersTable.cs",
+              "RelativeToolTip": "Migrations\\20250213104913_SlidersTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:49:14.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Models\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "Models\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:32:06.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Shahla\\Desktop\\Juan_Mvc_Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -145,8 +220,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T23:35:41.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:35:41.766Z"
             }
           ]
         },
