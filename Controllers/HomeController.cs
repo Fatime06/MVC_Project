@@ -17,8 +17,9 @@ namespace Juan_Mvc_Project.Controllers
         public IActionResult Index()
         {
             HomeVm homeVm = new HomeVm();
-            homeVm.sliders= _context.Sliders.ToList();
-            return View(sliders);
+            homeVm.Sliders = _context.Sliders.ToList();
+            homeVm.Services = _context.Services.ToList();
+            return View(homeVm);
         }
     }
 }
