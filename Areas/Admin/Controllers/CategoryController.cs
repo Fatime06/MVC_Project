@@ -2,91 +2,115 @@
 using Juan_Mvc_Project.Data;
 using Juan_Mvc_Project.Helpers;
 using Juan_Mvc_Project.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Juan_Mvc_Project.Areas.Admin.Controllers
 {
-	[Area("Admin")]
-	public class CategoryController : Controller
-	{
-		private readonly JuanDbContext _context;
+    [Area("Admin")]
+    [Authorize]
+    public class CategoryController : Controller
+    {
+        private readonly JuanDbContext _context;
 
-		public CategoryController(JuanDbContext context)
-		{
-			_context = context;
-		}
+        public CategoryController(JuanDbContext context)
+        {
+            _context = context;
+        }
 
-		public IActionResult Index(int page = 1,int take = 2)
-		{
-			var query = _context.Categories.Include(c=>c.Products).AsQueryable();
-			PaginatedList<Category> paginatedList = PaginatedList<Category>.Create(query, take, page);
-			return View(paginatedList);
-		}
-		public IActionResult Create()
-		{
-			return View();
-		}
-		[HttpPost]
-        public IActionResult Create(Category category)
+        public async Task<IActionResult> Index()
         {
-			if (!ModelState.IsValid) return View();
-			if(_context.Categories.Any(c=>c.Name.ToLower() == category.Name.Trim().ToLower()))
-			{
-				ModelState.AddModelError("Name", "This category already exists");
-				return View();
-			}
-			category.Name = category.Name.Trim();
-			_context.Categories.Add(category);
-			_context.SaveChanges();
-            return RedirectToAction("Index");
+            var categories = await _context.Categories.ToListAsync();
+            return View(categories);
         }
-		public IActionResult Edit(int? id)
-		{
-            if (id is null)
-            {
-				return BadRequest();
-            }
-            var category = _context.Categories.FirstOrDefault(c=>c.Id == id);
-			if(category is null)
-			{
-				return NotFound();
-			}
-			return View(category);
-		}
-		[HttpPost]
-        public IActionResult Edit(Category category)
+
+        public IActionResult Create()
         {
-            if (!ModelState.IsValid) return View();
-            if (_context.Categories.Any(c => c.Name.ToLower() == category.Name.Trim().ToLower() && c.Id != category.Id))
-            {
-                ModelState.AddModelError("Name", "This category already exist");
-                return View();
-            }
-            var existCategory = _context.Categories.FirstOrDefault(c => c.Id == category.Id);
-            if (category is null)
-            {
-                return NotFound();
-            }
-			existCategory.Name = category.Name.Trim();
-			_context.SaveChanges();
-            return RedirectToAction("Index");
+            return View();
         }
-		public IActionResult Detail(int? id)
-		{
-            if (id is null) return BadRequest();
-            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            if (category is null) return NotFound();
-            return View(category);
-        }
-        public IActionResult Delete(int? id)
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Category category)
         {
-            if (id is null) return BadRequest();
-            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
-            if (category is null) return NotFound();
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
+            if (!ModelState.IsValid)
+                return View(category);
+
+            if (await _context.Categories.AnyAsync(c => c.Name == category.Name))
+            {
+                ModelState.AddModelError("Name", "Category with this name already exists.");
+                return View(category);
+            }
+
+            category.CreateDate = DateTime.UtcNow;
+            await _context.Categories.AddAsync(category);
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+                return NotFound();
+
+            return View(category);
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+                return NotFound();
+
+            return View(category);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Category category)
+        {
+            if (!ModelState.IsValid)
+                return View(category);
+
+            var existingCategory = await _context.Categories.FindAsync(id);
+            if (existingCategory == null)
+                return NotFound();
+
+            if (await _context.Categories.AnyAsync(c => c.Name == category.Name && c.Id != id))
+            {
+                ModelState.AddModelError("Name", "Another category with this name already exists.");
+                return View(category);
+            }
+
+            existingCategory.Name = category.Name;
+            _context.Categories.Update(existingCategory);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existingCategory = await _context.Categories.FindAsync(id);
+            if (existingCategory == null)
+                return NotFound();
+
+            _context.Categories.Remove(existingCategory);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

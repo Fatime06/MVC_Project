@@ -1,13 +1,12 @@
-﻿@model Category
+﻿@model Size
 
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow-lg border-0">
                 <div class="card-body p-4">
-                    <h3 class="mb-4 text-center text-primary">Edit Category</h3>
+                    <h3 class="mb-4 text-center text-primary">Edit Size</h3>
                     <form method="post" class="shadow p-4 rounded bg-white">
-
                         <input type="hidden" asp-for="Id" />
 
                         <div class="mb-3">
@@ -24,7 +23,6 @@
         </div>
     </div>
 </div>
-
 @section scripts {
     @await Html.PartialAsync("_ValidationPartial")
 

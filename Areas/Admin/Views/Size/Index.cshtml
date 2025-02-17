@@ -1,5 +1,4 @@
-﻿@model List<Category>
-
+﻿@model List<Size>
 @{
     int count = 0;
 }
@@ -34,7 +33,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Create </h4>
-                        <a asp-action="create" asp-controller="category" class="btn btn-outline-success">Create</a>
+                        <a asp-action="create" asp-controller="size" class="btn btn-outline-success">Create</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -55,18 +54,19 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    @foreach (var category in Model)
+                                    @foreach (var size in Model)
                                     {
                                         <tr>
-                                            <td>@category.Name</td>
-                                            <td>@category.CreatedDate.ToString("yyyy-MM-dd")</td>
+                                            <td>@(++count)</td>
+                                            <td>@size.Name</td>
+                                            <td>@size.CreatedDate.ToString("yyyy-MM-dd")</td>
                                             <td>
-                                                <a asp-action="Detail" asp-route-id="@category.Id" class="btn btn-success">View Detail</a>
-                                                <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary">Edit</a>
+                                                <a asp-action="Detail" asp-route-id="@size.Id" class="btn btn-success">View</a>
+                                                <a asp-action="Edit" asp-route-id="@size.Id" class="btn btn-primary">Edit</a>
 
                                                 <button class="btn btn-danger delete-btn"
-                                                        data-id="@category.Id"
-                                                        data-name="@category.Name"
+                                                        data-id="@size.Id"
+                                                        data-name="@size.Name"
                                                         data-bs-toggle="modal"
                                                         data-bs-target="#deleteModal">
                                                     Delete
@@ -94,12 +94,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to delete this category?</p>
-                <p><strong>Name:</strong> <span id="deleteCategoryName"></span></p>
+                <p>Are you sure you want to delete this size?</p>
+                <p><strong>Size Name:</strong> <span id="deleteSizeName"></span></p>
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="post">
-                    <input type="hidden" name="id" id="hiddenCategoryId">
+                    <input type="hidden" name="id" id="hiddenSizeId">
                     <button type="submit" class="btn btn-danger">Delete</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </form>
@@ -110,22 +110,21 @@
 
 @section scripts {
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var deleteButtons = document.querySelectorAll(".delete-btn");
-            var deleteCategoryName = document.getElementById("deleteCategoryName");
-            var hiddenCategoryId = document.getElementById("hiddenCategoryId");
-            var deleteForm = document.getElementById("deleteForm");
+        $(document).ready(function () {
+            $('#sizeTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true
+            });
 
-            deleteButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    var categoryId = this.getAttribute("data-id");
-                    var categoryName = this.getAttribute("data-name");
+            $(".delete-btn").click(function () {
+                let sizeId = $(this).data("id");
+                let sizeName = $(this).data("name");
 
-                    deleteCategoryName.textContent = categoryName;
-                    hiddenCategoryId.value = categoryId;
-
-                    deleteForm.action = "/Manage/Category/Delete/" + categoryId;
-                });
+                $("#deleteSizeName").text(sizeName);
+                $("#hiddenSizeId").val(sizeId);
+                $("#deleteForm").attr("action", "/Manage/Size/Delete/" + sizeId);
             });
         });
     </script>

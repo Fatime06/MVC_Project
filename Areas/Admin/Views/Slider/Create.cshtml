@@ -1,0 +1,89 @@
+﻿@model Slider
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 text-center text-primary">Add New Slider</h3>
+
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-bold">Title</label>
+                            <input asp-for="Title" class="form-control form-control-lg" placeholder="Enter title">
+                            <span class="text-danger small" asp-validation-for="Title"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-bold">Description</label>
+                            <textarea asp-for="Description" class="form-control form-control-lg" rows="3" placeholder="Enter description"></textarea>
+                            <span class="text-danger small" asp-validation-for="Description"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="ButtonLink" class="form-label fw-bold">Button Link</label>
+                                <input asp-for="ButtonLink" class="form-control form-control-lg" placeholder="Enter button link">
+                                <span class="text-danger small" asp-validation-for="ButtonLink"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="ButtonText" class="form-label fw-bold">Button Text</label>
+                                <input asp-for="ButtonText" class="form-control form-control-lg" placeholder="Enter button text">
+                                <span class="text-danger small" asp-validation-for="ButtonText"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="UpperText" class="form-label fw-bold">Upper Text</label>
+                            <input asp-for="UpperText" class="form-control form-control-lg" placeholder="Enter upper text">
+                            <span class="text-danger small" asp-validation-for="UpperText"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Photo" class="form-label fw-bold">Upload Image</label>
+                            <input asp-for="Photo" type="file" class="form-control form-control-lg" id="imageInput">
+                            <div class="text-center mt-2">
+                                <img id="imgPreview" class="rounded shadow-sm border p-1" style="display:none; margin-top:10px; max-width: 100%; height: auto;" src="" alt="Preview Image">
+                            </div>
+                            <span class="text-danger small" asp-validation-for="Photo"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="OrderQueue" class="form-label fw-bold">Order</label>
+                            <input asp-for="OrderQueue" type="number" min="1" class="form-control form-control-lg" placeholder="Enter order number">
+                            <span class="text-danger small" asp-validation-for="OrderQueue"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                            <a asp-action="Index" class="btn btn-secondary btn-lg w-100 mt-2">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+    <script>
+        $(document).ready(function () {
+            $("#imageInput").change(function (ev) {
+                let file = ev.target.files[0];
+
+                if (!file) {
+                    $("#imgPreview").hide();
+                    return;
+                }
+
+                var uploading = new FileReader();
+                uploading.onload = function (displayimg) {
+                    $("#imgPreview").attr("src", displayimg.target.result).show();
+                };
+                uploading.readAsDataURL(file);
+            });
+        });
+    </script>
+}

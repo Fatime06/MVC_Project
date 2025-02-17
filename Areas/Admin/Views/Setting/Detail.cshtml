@@ -1,0 +1,29 @@
+﻿@model Setting
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 text-center text-primary">View Setting</h3>
+
+                    <form>
+                        <div class="mb-3">
+                            <label asp-for="Key" class="form-label fw-bold">Key</label>
+                            <input asp-for="Key" class="form-control form-control-lg" disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Value" class="form-label fw-bold">Value</label>
+                            <input asp-for="Value" class="form-control form-control-lg" disabled>
+                        </div>
+
+                        <div class="text-center">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg w-50">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

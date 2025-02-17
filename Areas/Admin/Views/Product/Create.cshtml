@@ -1,0 +1,129 @@
+﻿@model Product
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 text-center text-primary">Add New Product</h3>
+
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">Product Name</label>
+                            <input asp-for="Name" class="form-control form-control-lg" placeholder="Enter product name">
+                            <span class="text-danger small" asp-validation-for="Name"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-bold">Description</label>
+                            <textarea asp-for="Description" class="form-control form-control-lg" rows="3" placeholder="Enter product description"></textarea>
+                            <span class="text-danger small" asp-validation-for="Description"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="SalePrice" class="form-label fw-bold">Sale Price ($)</label>
+                                <input asp-for="SalePrice" type="number" step="0.01" class="form-control form-control-lg" placeholder="Enter sale price">
+                                <span class="text-danger small" asp-validation-for="SalePrice"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="CostPrice" class="form-label fw-bold">Cost Price ($)</label>
+                                <input asp-for="CostPrice" type="number" step="0.01" class="form-control form-control-lg" placeholder="Enter cost price">
+                                <span class="text-danger small" asp-validation-for="CostPrice"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DiscountPercentage" class="form-label fw-bold">Discount (%)</label>
+                                <input asp-for="DiscountPercentage" type="number" step="0.1" class="form-control form-control-lg" placeholder="Enter discount percentage">
+                                <span class="text-danger small" asp-validation-for="DiscountPercentage"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Rate" class="form-label fw-bold">Rating</label>
+                                <input asp-for="Rate" type="number" min="1" max="5" class="form-control form-control-lg" placeholder="Enter rating (1-5)">
+                                <span class="text-danger small" asp-validation-for="Rate"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="CategoryId" class="form-label fw-bold">Category</label>
+                            <select asp-for="CategoryId" class="form-select form-control-lg">
+                                <option value="">Select Category</option>
+                                @foreach (var category in ViewBag.Categories)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </select>
+                            <span class="text-danger small" asp-validation-for="CategoryId"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="SizeIds" class="form-label fw-bold">Available Sizes</label>
+                            <select asp-for="SizeIds" class="form-select form-control-lg" multiple>
+                                @foreach (var size in ViewBag.Sizes)
+                                {
+                                    <option value="@size.Id">@size.Name</option>
+                                }
+                            </select>
+                            <span class="text-danger small" asp-validation-for="SizeIds"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Photos" class="form-label fw-bold">Upload Images</label>
+                            <input asp-for="Photos" type="file" class="form-control form-control-lg" id="imageInput" multiple>
+                            <div class="text-center mt-2" id="imagePreviewContainer">
+                            </div>
+                            <span class="text-danger small" asp-validation-for="Photos"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="InStock" class="form-label fw-bold">Stock Availability</label>
+                            <select asp-for="InStock" class="form-select form-control-lg">
+                                <option value="true">In Stock</option>
+                                <option value="false">Out of Stock</option>
+                            </select>
+                            <span class="text-danger small" asp-validation-for="InStock"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+                            <a asp-action="Index" class="btn btn-secondary btn-lg w-100 mt-2">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+    <script>
+        $(document).ready(function () {
+            $("#imageInput").change(function (ev) {
+                let files = ev.target.files;
+                let previewContainer = $("#imagePreviewContainer");
+                previewContainer.empty();
+
+                if (files.length === 0) {
+                    return;
+                }
+
+                Array.from(files).forEach(file => {
+                    let reader = new FileReader();
+                    reader.onload = function (e) {
+                        let imgElement = $("<img>").attr("src", e.target.result)
+                            .addClass("rounded shadow-sm border p-1 m-1")
+                            .css({ "max-width": "100px", "height": "auto" });
+
+                        previewContainer.append(imgElement);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            });
+        });
+    </script>
+}
