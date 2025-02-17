@@ -16,5 +16,11 @@ namespace Juan_Mvc_Project.Models
         public List<ProductImage> ProductImages { get; set; }
         public List<ProductSize> ProductSizes { get; set; }
         public List<ProductTag> ProductTags { get; set; }
+
+        public Product()
+        {
+            ProductImages = new List<ProductImage>();
+            ProductSizes = new List<ProductSize>();
+        }
     }
 }

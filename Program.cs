@@ -9,7 +9,10 @@ builder.Services.AddDbContext<JuanDbContext>(options =>
 });
 
 var app = builder.Build();
-
+app.MapControllerRoute(
+           name: "areas",
+           pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+         );
 app.MapDefaultControllerRoute();
 app.UseStaticFiles();
 app.UseAuthentication();
