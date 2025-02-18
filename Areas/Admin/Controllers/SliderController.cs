@@ -33,7 +33,7 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(Slider slider)
 		{
-			if (slider.Photo == null)
+			if (slider.Image == null)
 			{
 				ModelState.AddModelError("Photo", "Photo is required");
 			}
@@ -41,9 +41,9 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 			if (!ModelState.IsValid)
 				return View(slider);
 
-			var file = slider.Photo;
+			var file = slider.Image;
 			slider.Image = file.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
-			slider.CreatedDate = DateTime.UtcNow;
+			slider.CreateDate = DateTime.UtcNow;
 
 			await _context.Sliders.AddAsync(slider);
 			await _context.SaveChangesAsync();
@@ -73,7 +73,7 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 
 			string oldImage = existingSlider.Image;
 
-			if (slider.Photo != null)
+			if (slider.Image != null)
 			{
 				if (!string.IsNullOrEmpty(oldImage))
 				{
@@ -81,14 +81,12 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 					FileManager.DeleteFile(deletedImagePath);
 				}
 
-				existingSlider.Image = slider.Photo.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
+				existingSlider.Image = slider.Image.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
 			}
 
 			existingSlider.Title = slider.Title;
 			existingSlider.Description = slider.Description;
-			existingSlider.ButtonLink = slider.ButtonLink;
 			existingSlider.ButtonText = slider.ButtonText;
-			existingSlider.OrderQueue = slider.OrderQueue;
 
 			_context.Sliders.Update(existingSlider);
 			_context.SaveChanges();

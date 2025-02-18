@@ -1,4 +1,5 @@
-﻿using Juan_Mvc_Project.ViewModels;
+﻿using Juan_Mvc_Project.Models;
+using Juan_Mvc_Project.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

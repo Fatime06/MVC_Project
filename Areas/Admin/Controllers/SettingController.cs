@@ -1,4 +1,5 @@
 ﻿using Juan_Mvc_Project.Data;
+using Juan_Mvc_Project.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

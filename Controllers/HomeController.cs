@@ -1,25 +1,37 @@
-﻿using Juan_Mvc_Project.Data;
+using Juan_Mvc_Project.Data;
 using Juan_Mvc_Project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace Juan_Mvc_Project.Controllers
+namespace JuanApp.Controllers
 {
-    public class HomeController : Controller
+	public class HomeController : Controller
     {
+        private readonly JuanDbContext _juanAppDbContext;
 
-        private readonly JuanDbContext _context;
-
-        public HomeController(JuanDbContext context)
+        public HomeController(JuanDbContext juanAppDbContext)
         {
-            _context = context;
+            _juanAppDbContext = juanAppDbContext;
         }
 
         public IActionResult Index()
         {
-            HomeVm homeVm = new HomeVm();
-            homeVm.Sliders = _context.Sliders.ToList();
-            homeVm.Services = _context.Services.ToList();
-            return View(homeVm);
+            HomeVM homeVM = new();
+            homeVM.Sliders = _juanAppDbContext.Sliders.ToList();
+            homeVM.Products = _juanAppDbContext.Products
+               .Include(b => b.Category)
+               .Include(b => b.ProductSizes)
+               .Include(b => b.ProductImages.Where(x => x.Status != null))
+               .ToList();
+            homeVM.NewProducts = _juanAppDbContext.Products
+               .Include(b => b.Category)
+               .Include(b => b.ProductSizes)
+               .Include(b => b.ProductImages.Where(x => x.Status != null))
+               .OrderByDescending(p => p.Id)
+               .Take(4)
+               .ToList();
+            return View(homeVM);
         }
+
     }
 }

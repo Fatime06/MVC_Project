@@ -14,9 +14,12 @@ namespace Juan_Mvc_Project.Data
         public DbSet<ProductSize> ProductSizes { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
+        public DbSet<ProductReview> ProductReviews { get; set; }
         public JuanDbContext(DbContextOptions options) : base(options)
         {
         }
