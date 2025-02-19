@@ -11,7 +11,7 @@ var config = builder.Configuration;
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<JuanDbContext>(options =>
 {
-	options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+	options.UseSqlServer(config.GetConnectionString("Default"));
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
@@ -22,8 +22,6 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 	opt.Password.RequireNonAlphanumeric = true;
 	opt.Password.RequiredLength = 6;
 	opt.User.RequireUniqueEmail = true;
-
-	//opt.SignIn.RequireConfirmedEmail = true;
 
 	opt.Lockout.MaxFailedAccessAttempts = 3;
 	opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);

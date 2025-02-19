@@ -251,3 +251,11 @@ C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\runtimes\win\lib\net7.
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\MailKit.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Shahla\Desktop\Juan_Mvc_Project\obj\Debug\net8.0\scopedcss\projectbundle\Juan_Mvc_Project.bundle.scp.css

@@ -1,4 +1,5 @@
 ﻿using Juan_Mvc_Project.Models;
+using JuanApp.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,9 @@ namespace Juan_Mvc_Project.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<ProductReview> ProductReviews { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public JuanDbContext(DbContextOptions options) : base(options)
         {
         }

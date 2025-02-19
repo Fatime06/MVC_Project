@@ -1,4 +1,5 @@
 ﻿using Juan_Mvc_Project.Data;
+using Juan_Mvc_Project.Helpers;
 using Juan_Mvc_Project.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -41,7 +42,7 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 			if (!ModelState.IsValid)
 				return View(slider);
 
-			var file = slider.Image;
+			var file = slider.Photo;
 			slider.Image = file.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
 			slider.CreateDate = DateTime.UtcNow;
 
@@ -81,7 +82,7 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
 					FileManager.DeleteFile(deletedImagePath);
 				}
 
-				existingSlider.Image = slider.Image.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
+				existingSlider.Image = slider.Photo.SaveImage(_webHostEnvironment.WebRootPath, "assets/img/slider");
 			}
 
 			existingSlider.Title = slider.Title;

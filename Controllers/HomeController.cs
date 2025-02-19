@@ -17,6 +17,7 @@ namespace JuanApp.Controllers
         public IActionResult Index()
         {
             HomeVM homeVM = new();
+            homeVM.Services = _juanAppDbContext.Services.ToList();
             homeVM.Sliders = _juanAppDbContext.Sliders.ToList();
             homeVM.Products = _juanAppDbContext.Products
                .Include(b => b.Category)

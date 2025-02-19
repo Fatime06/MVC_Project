@@ -73,7 +73,7 @@ namespace Juan_Mvc_Project.Areas.Admin.Controllers
                 foreach (var file in files)
                 {
                     ProductImage productImage = new();
-                    productImage = file.SaveImage(_env.WebRootPath, "assets/img/product");
+                    productImage.Name = file.SaveImage(_env.WebRootPath, "assets/img/product");
                     if (files[0] == file)
                     {
                         productImage.Status = true;
